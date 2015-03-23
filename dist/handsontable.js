@@ -7,7 +7,7 @@
  * Licensed under the MIT license.
  * http://handsontable.com/
  *
- * Date: Thu Mar 19 2015 15:05:12 GMT+0100 (CET)
+ * Date: Mon Mar 23 2015 18:05:50 GMT+0100 (CET)
  */
 /*jslint white: true, browser: true, plusplus: true, indent: 4, maxerr: 50 */
 
@@ -6848,6 +6848,8 @@ Handsontable.helper.pageY = function (event) {
     }
 
     Handsontable.Dom.empty(TD); //TODO identify under what circumstances this line can be removed
+    
+    Handsontable.renderers.cellDecorator.apply(this, arguments);
 
     var INPUT = clonableINPUT.cloneNode(false); //this is faster than createElement
 

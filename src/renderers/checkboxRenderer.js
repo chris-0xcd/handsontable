@@ -29,6 +29,8 @@
     }
 
     Handsontable.Dom.empty(TD); //TODO identify under what circumstances this line can be removed
+    
+    Handsontable.renderers.cellDecorator.apply(this, arguments);
 
     var INPUT = clonableINPUT.cloneNode(false); //this is faster than createElement
 
